@@ -10,11 +10,11 @@
 
 
 #define GETCALAMITYDETAILSURL @"https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"
-
-
+#define EQFEATURES @"features"
 
 #define EQLISTINGCELL @"EQListingCell"
-#define EQFEATURES @"features"
+#define EQMAPLOADER @"mapLoader"
+
 #define EQDATEFORMAT @"dd/MM/yyy hh:mm a"
 #define EQPROPERTIES @"properties"
 #define EQPLACE @"place"
@@ -22,6 +22,10 @@
 #define EQTIME @"time"
 #define EQMAGNITUDE @"mag"
 #define EQMAGNITUDEFULL @"Magnitude"
+
+#define EQPLACE @"place"
+#define EQGEOMETRY @"geometry"
+#define EQCOORDINATE @"coordinates"
 
 
 #define EQCELLHEIGHT 100

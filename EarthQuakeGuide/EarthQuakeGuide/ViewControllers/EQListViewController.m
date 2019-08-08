@@ -9,7 +9,9 @@
 #import "EQListViewController.h"
 
 @interface EQListViewController ()
-
+{
+    NSDictionary *selectedCalamityDetails;
+}
 @end
 
 @implementation EQListViewController
@@ -111,20 +113,20 @@
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-//{
-//    mSelectedEQDetails = [_mEQdDetailsArray objectAtIndex:indexPath.row];
-//    [self performSegueWithIdentifier:EQTMAPVIEW_IDENTIFIER sender:indexPath];
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    selectedCalamityDetails = [calamityDetailsArray objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:EQMAPLOADER sender:indexPath];
+}
 
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqualToString:EQTMAPVIEW_IDENTIFIER])
-//    {
-//        EQMapViewController *pDetailViewController = (EQMapViewController*)segue.destinationViewController;
-//        pDetailViewController.mEQdeatils =  mSelectedEQDetails;
-//    }
-//}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:EQMAPLOADER])
+    {
+        EQGMapViewController *mapVC = (EQGMapViewController*)segue.destinationViewController;
+        mapVC.calamityDetails =  selectedCalamityDetails;
+    }
+}
 
 /**
  Format time from timestamp

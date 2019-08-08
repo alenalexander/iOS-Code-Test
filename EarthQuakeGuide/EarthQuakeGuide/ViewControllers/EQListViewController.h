@@ -10,6 +10,7 @@
 #import "GenericConstants.h"
 #import "EQListingTableCell.h"
 #import "AFHTTPSessionManager.h"
+#import "EQGMapViewController.h"
 
 @interface EQListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
