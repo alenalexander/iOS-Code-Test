@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GenericConstants.h"
-#import "EQListingTableCell.h"
-#import "AFHTTPSessionManager.h"
-#import "EQGMapViewController.h"
+
 
 @interface EQListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
@@ -22,6 +20,6 @@
 -(void)loadListView;
 -(NSString*)formatTime:(double)timeStamp;
 
-
+-(NSString *)returnMagnitudeString:(NSString *)magString;
 @end
 
