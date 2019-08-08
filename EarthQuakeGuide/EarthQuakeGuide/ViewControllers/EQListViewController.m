@@ -7,6 +7,9 @@
 //
 
 #import "EQListViewController.h"
+#import "EQListingTableCell.h"
+#import "EQGMapViewController.h"
+#import "AFHTTPSessionManager.h"
 
 @interface EQListViewController ()
 {

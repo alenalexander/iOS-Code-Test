@@ -37,7 +37,6 @@
 -(void)setPropertiesOfMap{
     NSString* place = [[self.calamityDetails valueForKey:EQPROPERTIES] valueForKey:EQPLACE];
     NSArray* coordiante = [[self.calamityDetails valueForKey:EQGEOMETRY] valueForKey:EQCOORDINATE];
-    
     MKCoordinateRegion region;
     MKCoordinateSpan span;
     span.latitudeDelta = 0.5;
