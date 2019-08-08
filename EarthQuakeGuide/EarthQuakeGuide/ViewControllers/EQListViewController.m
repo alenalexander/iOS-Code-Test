@@ -106,21 +106,36 @@
     cell.eqPlaceLabel.text = [[[calamityDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQPLACE];
     cell.calamityTypeLabel.text = [[[calamityDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQTYPE];
     NSString * strength = [[[[calamityDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQMAGNITUDE] stringValue];
-    cell.calamityStrengthLabel.text = [NSString stringWithFormat:@"%@ : %@",EQMAGNITUDEFULL, strength];;
+    cell.calamityStrengthLabel.text = [self returnMagnitudeString:strength];
     double time = [[[[calamityDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQTIME] doubleValue];
     cell.calamityTimeLabel.text = [self formatTime:time];
     
     return cell;
 }
 
+-(NSString *)returnMagnitudeString:(NSString *)magString{
+    if ([magString isKindOfClass:[NSString class]] && magString.length > 0) {
+        NSRange stringRange = {0, MIN([magString length], 4)};
+        stringRange = [magString rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortStrength= [magString substringWithRange:stringRange];
+        return  [NSString stringWithFormat:@"%@ : %@",EQMAGNITUDEFULL, shortStrength];
+    } else{
+        return [NSString stringWithFormat:@"%@ : Unknown",EQMAGNITUDEFULL];
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     selectedCalamityDetails = [calamityDetailsArray objectAtIndex:indexPath.row];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:EQMAPLOADER sender:indexPath];
 }
 
+#pragma mark - Navigation Methods
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
     if ([segue.identifier isEqualToString:EQMAPLOADER])
     {
         EQGMapViewController *mapVC = (EQGMapViewController*)segue.destinationViewController;
@@ -128,6 +143,7 @@
     }
 }
 
+#pragma mark - Utility Methods
 /**
  Format time from timestamp
  @param timeStamp timestamp in millisecond.
