@@ -17,6 +17,7 @@
 		248BD38822FBED1200987689 /* EarthQuakeGuideUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 248BD38722FBED1200987689 /* EarthQuakeGuideUITests.m */; };
 		248BD39922FBF4A500987689 /* GenericConstants.h in Sources */ = {isa = PBXBuildFile; fileRef = 248BD39822FBF4A500987689 /* GenericConstants.h */; };
 		248BD39D22FBFB2E00987689 /* EQListingTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 248BD39C22FBFB2E00987689 /* EQListingTableCell.m */; };
+		248BD3A022FC233E00987689 /* EQDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248BD39F22FC233E00987689 /* EQDetailViewController.m */; };
 		A096E1448ECAF02C0870CABA /* Pods_EarthQuakeGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABB560257928B22625CE241 /* Pods_EarthQuakeGuide.framework */; };
 		AE91D7109012DE5AB4654315 /* Pods_EarthQuakeGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A741B415164FCA52F3C2896 /* Pods_EarthQuakeGuideUITests.framework */; };
 		DB2135F3AFDCE2E56D2FDB81 /* Pods_EarthQuakeGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0B2848DBC3C701EFA9F465 /* Pods_EarthQuakeGuideTests.framework */; };
@@ -63,6 +64,8 @@
 		248BD39822FBF4A500987689 /* GenericConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericConstants.h; sourceTree = "<group>"; };
 		248BD39B22FBFB2E00987689 /* EQListingTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQListingTableCell.h; sourceTree = "<group>"; };
 		248BD39C22FBFB2E00987689 /* EQListingTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQListingTableCell.m; sourceTree = "<group>"; };
+		248BD39E22FC233E00987689 /* EQDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQDetailViewController.h; sourceTree = "<group>"; };
+		248BD39F22FC233E00987689 /* EQDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQDetailViewController.m; sourceTree = "<group>"; };
 		AABB560257928B22625CE241 /* Pods_EarthQuakeGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EarthQuakeGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B703E96BBAC1357AE1EF9B14 /* Pods-EarthQuakeGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarthQuakeGuideTests.debug.xcconfig"; path = "Target Support Files/Pods-EarthQuakeGuideTests/Pods-EarthQuakeGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC957E6D18D1E79FC167EEE7 /* Pods-EarthQuakeGuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarthQuakeGuideUITests.release.xcconfig"; path = "Target Support Files/Pods-EarthQuakeGuideUITests/Pods-EarthQuakeGuideUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 			children = (
 				248BD36622FBED1000987689 /* EQListViewController.h */,
 				248BD36722FBED1000987689 /* EQListViewController.m */,
+				248BD39E22FC233E00987689 /* EQDetailViewController.h */,
+				248BD39F22FC233E00987689 /* EQDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 				248BD36822FBED1000987689 /* EQListViewController.m in Sources */,
 				248BD37322FBED1200987689 /* main.m in Sources */,
 				248BD39D22FBFB2E00987689 /* EQListingTableCell.m in Sources */,
+				248BD3A022FC233E00987689 /* EQDetailViewController.m in Sources */,
 				248BD36522FBED1000987689 /* AppDelegate.m in Sources */,
 				248BD39922FBF4A500987689 /* GenericConstants.h in Sources */,
 			);
