@@ -9,6 +9,19 @@
 #import <Foundation/Foundation.h>
 
 
-#define URL @"https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"
+#define GETCALAMITYDETAILSURL @"https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"
+
+
+
 #define EQLISTINGCELL @"EQListingCell"
+#define EQFEATURES @"features"
+#define EQDATEFORMAT @"dd/MM/yyy hh:mm a"
+#define EQPROPERTIES @"properties"
+#define EQPLACE @"place"
+#define EQTYPE @"type"
+#define EQTIME @"time"
+#define EQMAGNITUDE @"mag"
+#define EQMAGNITUDEFULL @"Magnitude"
+
+
 #define EQCELLHEIGHT 100
